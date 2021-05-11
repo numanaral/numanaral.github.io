@@ -7,6 +7,7 @@
 	--border-radius: 8px;
 	--icon-width: 40px;
 
+	--code-color: #9900ef;
 	--linkedin-color: #0a66c2;
 	--github-color: #ffffff;
 	--facebook-color: #0b84ee;
@@ -36,6 +37,8 @@ body {
 h1 {
 	color: var(--primary);
 	margin-bottom: calc(var(--spacing));
+	width: 100%;
+	text-align: center;
 }
 
 .flex-centered {
@@ -69,6 +72,10 @@ h1 {
 	transform: scale(1.3);
 }
 
+.fa-code:hover {
+	color: var(--code-color);
+}
+
 .fa-linkedin:hover {
 	color: var(--linkedin-color);
 }
@@ -98,6 +105,37 @@ h1 {
 		0px 1px 14px 0px rgba(0, 0, 0, 0.12);
 }
 
+.card span {
+	position: absolute;
+	color: var(--secondary);
+	font-weight: 900;
+	font-size: 12px;
+}
+
+.card span:nth-of-type(1) {
+	top: 15px;
+	right: 3px;
+	transform: rotate(30deg);
+}
+
+.card span:nth-of-type(2) {
+	top: 30px;
+	left: 3px;
+	transform: rotate(-30deg);
+}
+
+.card span:nth-of-type(3) {
+	bottom: 45px;
+	right: 3px;
+	transform: rotate(-30deg);
+}
+
+.card span:nth-of-type(4) {
+	bottom: 35px;
+	left: 3px;
+	transform: rotate(30deg);
+}
+
 .card:hover {
 	background-color: #ffffff05;
 }
@@ -115,4 +153,15 @@ h1 {
 
 body > div:not(.card) {
 	pointer-events: none;
+}
+
+@media only screen and (max-width: 600px) {
+	.card {
+		width: 100%;
+		padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+	}
+
+	.card span {
+		display: none;
+	}
 }
