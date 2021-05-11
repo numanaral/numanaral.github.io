@@ -110,6 +110,8 @@ h1 {
 	color: var(--secondary);
 	font-weight: 900;
 	font-size: 12px;
+	opacity: 0;
+	transition: opacity 0.3s;
 }
 
 .card span:nth-of-type(1) {
@@ -138,6 +140,10 @@ h1 {
 
 .card:hover {
 	background-color: #ffffff05;
+}
+
+.card:hover span {
+	opacity: 1;
 }
 
 .small {
