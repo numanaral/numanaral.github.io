@@ -1,20 +1,58 @@
 <!doctype html>
-    <head>
-		<!-- YOU DON'T GOTTA KNOW -->
-        <meta charset="utf-8">
+<html lang="en">
+	<head>
+		<!-- BASE PROPS -->
+		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		
-		<!-- GENERIC -->
-        <title> Numan Aral </title>
-        <meta name="description" content="Personal website">
+
+		<!-- METADATA -->
+		<title>Numan Aral | Senior Software Engineer</title>
+		<meta name="description" content="Numan Aral — senior software engineer at Pinterest, working on internal tooling and agentic development.">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+		<meta name="author" content="Numan Aral">
+		<meta name="robots" content="index, follow">
+
+		<!-- CANONICAL -->
+		<link rel="canonical" href="https://numanaral.dev/">
+
+		<!-- OPEN GRAPH -->
+		<meta property="og:site_name" content="Numan Aral">
+		<meta property="og:type" content="profile">
+		<meta property="og:url" content="https://numanaral.dev/">
+		<meta property="og:title" content="Numan Aral | Senior Software Engineer">
+		<meta property="og:description" content="Numan Aral — senior software engineer at Pinterest, working on internal tooling and agentic development.">
+		<meta property="og:image" content="https://numanaral.dev/android-chrome-384x384.png">
+		<meta property="og:image:width" content="384">
+		<meta property="og:image:height" content="384">
+
+		<!-- TWITTER -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="Numan Aral | Senior Software Engineer">
+		<meta name="twitter:description" content="Numan Aral — senior software engineer at Pinterest, working on internal tooling and agentic development.">
+		<meta name="twitter:image" content="https://numanaral.dev/android-chrome-384x384.png">
+
+		<!-- SOCIAL LINKS -->
+		<link rel="me" href="https://github.com/numanaral">
+		<link rel="me" href="https://www.linkedin.com/in/numanaral/">
+		<link rel="me" href="https://x.com/numanarall">
+		<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+		<!-- FAVICON -->
+		<link rel="preload" as="image" href="/favicon-32x32.png">
+		<link rel="preload" as="image" href="/apple-touch-icon.png" imagesrcset="/apple-touch-icon.png 1x, /android-chrome-192x192.png 2x">
+
+		<!-- FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+
 		<!-- SOCIAL ICONS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-		<!-- MY FUN LITTLE PROJECT CUZ THIS IS TOO BORING ATM -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/numanaral/coolcircles/style.css">
 		
+		<!-- FUN LITTLE PROJECT FROM AGES AGO: BACKGROUND RINGS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/numanaral/coolcircles/style.css">
+
 		<!-- THEME / FAVICON -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -24,12 +62,38 @@
 		<meta name="msapplication-TileColor" content="#73a1f1">
 		<meta name="theme-color" content="#73a1f1">
 
-		<!-- TEMP STYLE -->
+		<!-- STYLESHEET -->
 		<link rel="stylesheet" href="style.css">
 
-		<!-- CANONICAL -->
-		<link rel="canonical" href="https://numanaral.dev/">
-		<meta property="og:url" content="https://numanaral.dev/">
+		<!-- JSON-LD -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Numan Aral",
+			"url": "https://numanaral.dev/",
+			"image": "https://numanaral.dev/android-chrome-384x384.png",
+			"jobTitle": "Senior Software Engineer",
+			"worksFor": {
+				"@type": "Organization",
+				"name": "Pinterest",
+				"url": "https://www.pinterest.com/"
+			},
+			"sameAs": [
+				"https://github.com/numanaral",
+				"https://www.linkedin.com/in/numanaral/",
+				"https://x.com/numanarall"
+			],
+			"knowsAbout": [
+				"Software engineering",
+				"Agentic development",
+				"Web development",
+				"Developer tools",
+				"Open source"
+			],
+			"mainEntityOfPage": "https://numanaral.dev/"
+		}
+		</script>
 
 		<!-- Google Tag Manager -->
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -38,31 +102,101 @@
 		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-PLHCXGXN');</script>
 		<!-- End Google Tag Manager -->
-    </head>
-    <body class="flex-centered">
+	</head>
+	<body>
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLHCXGXN"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
-		<!-- CARD -->
-		<div draggable="true" class="card prohibited-area transition small flex-centered">
-			<h1> Numan Aral </h1>
-			<div class="flex-centered p-1 prohibited-area">
-				<a title="Project Showcase" target="_blank" rel="noopener" href="https://github.com/numanaral/project-showcase/" class="fa fa-code"></a>
-				<a title="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/numanaral/" class="fa fa-linkedin"></a>
-				<a title="Github" target="_blank" rel="noopener" href="https://github.com/numanaral" class="fa fa-github"></a>
-				<a title="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/numanarall/" class="fa fa-facebook"></a>
-			</div>
-			<span>drag me?</span>
-			<span>move mouse around?</span>
-			<span>hold mouse down outside?</span>
-			<span>double click outside?</span>
+
+		<div class="stage">
+			<main class="preview-card" id="previewCard">
+				<div class="wrap" id="wrap">
+					<article class="card prohibited-area transition small" id="card">
+						<span class="hint">drag me?</span>
+						<span class="hint">click outside?</span>
+						<span class="hint">double click outside?</span>
+						<span class="hint">hold mouse outside?</span>
+
+						<div class="head">
+							<span class="avatar-frame">
+								<img class="avatar-thumb" src="/favicon-32x32.png" alt="">
+								<img class="avatar lazy-img" src="/apple-touch-icon.png" srcset="/apple-touch-icon.png 1x, /android-chrome-192x192.png 2x" alt="Numan Aral" decoding="async" width="64" height="64">
+							</span>
+							<div class="text">
+								<h2>Numan Aral</h2>
+								<span class="role">Senior Software Engineer</span>
+							</div>
+						</div>
+
+						<div class="dock-compact">
+							<div class="dock-group">
+								<span class="group-title">Work</span>
+								<div class="dock-icons">
+									<a class="fa icon fa-pinterest" aria-label="Pinterest" target="_blank" rel="noopener" href="https://www.pinterest.com/"></a>
+								</div>
+							</div>
+							<div class="dock-group">
+								<span class="group-title">Profiles</span>
+								<div class="dock-icons">
+									<a class="fa icon fa-code" aria-label="Project Showcase" target="_blank" rel="noopener" href="https://github.com/numanaral/project-showcase/"></a>
+									<a class="fa icon fa-linkedin" aria-label="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/numanaral/"></a>
+									<a class="fa icon fa-github" aria-label="GitHub" target="_blank" rel="noopener" href="https://github.com/numanaral"></a>
+									<a class="fa icon fa-facebook" aria-label="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/numanarall/"></a>
+									<a class="fa icon icon-x" aria-label="X" target="_blank" rel="noopener" href="https://x.com/numanarall"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 102.4 464H31.8l164.7-188.5L23.4 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+								</div>
+							</div>
+							<div class="dock-group">
+								<span class="group-title">Projects</span>
+								<div class="dock-icons">
+									<a class="fa icon fa-sitemap project-mermaid-toolkit" aria-label="Mermaid Toolkit for Google Docs" target="_blank" rel="noopener" href="https://mermaid.numanaral.dev/?utm_source=numanaral.dev&amp;utm_medium=homepage&amp;utm_campaign=project_links&amp;utm_content=mermaid-toolkit"></a>
+									<a class="fa icon fa-bar-chart project-cursor-usage-stats" aria-label="Cursor Usage Stats" target="_blank" rel="noopener" href="https://cursor-usage-stats.numanaral.dev/"></a>
+									<a class="fa icon fa-cloud-download project-vercel-deploy-source-downloader" aria-label="Vercel Deploy Source Downloader" target="_blank" rel="noopener" href="https://vercel-deploy-source-downloader.numanaral.dev/"></a>
+									<a class="fa icon fa-wrench project-cursor-toolbox" aria-label="Cursor Toolbox" target="_blank" rel="noopener" href="https://cursor-toolbox.numanaral.dev/"></a>
+									<a class="fa icon fa-gamepad project-bomba-man" aria-label="Bomba Man" target="_blank" rel="noopener" href="https://bomba-man.numanaral.dev/"></a>
+									<a class="fa icon fa-slideshare project-slide-scott" aria-label="Slide Scott" target="_blank" rel="noopener" href="https://slide-scott.numanaral.dev/"></a>
+									<a class="fa icon fa-language project-chin-scraper" aria-label="Chin Scraper" target="_blank" rel="noopener" href="https://chin-scraper.numanaral.dev/"></a>
+								</div>
+							</div>
+						</div>
+
+						<button class="view-toggle" data-action="toggle-expand" type="button">details</button>
+					</article>
+
+					<aside class="drawer prohibited-area" id="drawer">
+						<div class="drawer-inner" id="drawerInner">
+							<div class="group">
+								<span class="group-title">Work</span>
+								<a class="row pinterest" href="https://www.pinterest.com/" target="_blank" rel="noopener"><i class="fa fa-pinterest"></i><span class="label">Pinterest</span><span class="handle">pinterest.com</span></a>
+							</div>
+							<div class="group">
+								<span class="group-title">Profiles</span>
+								<a class="row code" href="https://github.com/numanaral/project-showcase/" target="_blank" rel="noopener"><i class="fa fa-code"></i><span class="label">Project Showcase</span><span class="handle">github.com/numanaral/project-showcase</span></a>
+								<a class="row linkedin" href="https://www.linkedin.com/in/numanaral/" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i><span class="label">LinkedIn</span><span class="handle">linkedin.com/in/numanaral</span></a>
+								<a class="row github" href="https://github.com/numanaral" target="_blank" rel="noopener"><i class="fa fa-github"></i><span class="label">GitHub</span><span class="handle">github.com/numanaral</span></a>
+								<a class="row facebook" href="https://www.facebook.com/numanarall/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i><span class="label">Facebook</span><span class="handle">facebook.com/numanarall</span></a>
+								<a class="row x" href="https://x.com/numanarall" target="_blank" rel="noopener"><svg class="x-glyph" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 102.4 464H31.8l164.7-188.5L23.4 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42L364.4 421.8z"/></svg><span class="label">X</span><span class="handle">x.com/numanarall</span></a>
+							</div>
+							<div class="group">
+								<span class="group-title">Projects</span>
+								<a class="row project-mermaid-toolkit" href="https://mermaid.numanaral.dev/?utm_source=numanaral.dev&amp;utm_medium=homepage&amp;utm_campaign=project_links&amp;utm_content=mermaid-toolkit" target="_blank" rel="noopener"><i class="fa fa-sitemap"></i><span class="label">Mermaid Toolkit for Google Docs</span><span class="handle">mermaid.numanaral.dev</span></a>
+								<a class="row project-cursor-usage-stats" href="https://cursor-usage-stats.numanaral.dev/" target="_blank" rel="noopener"><i class="fa fa-bar-chart"></i><span class="label">Cursor Usage Stats</span><span class="handle">cursor-usage-stats.numanaral.dev</span></a>
+								<a class="row project-vercel-deploy-source-downloader" href="https://vercel-deploy-source-downloader.numanaral.dev/" target="_blank" rel="noopener"><i class="fa fa-cloud-download"></i><span class="label">Vercel Deploy Source Downloader</span><span class="handle">vercel-deploy-source-downloader.numanaral.dev</span></a>
+								<a class="row project-cursor-toolbox" href="https://cursor-toolbox.numanaral.dev/" target="_blank" rel="noopener"><i class="fa fa-wrench"></i><span class="label">Cursor Toolbox</span><span class="handle">cursor-toolbox.numanaral.dev</span></a>
+								<a class="row project-bomba-man" href="https://bomba-man.numanaral.dev/" target="_blank" rel="noopener"><i class="fa fa-gamepad"></i><span class="label">Bomba Man</span><span class="handle">bomba-man.numanaral.dev</span></a>
+								<a class="row project-slide-scott" href="https://slide-scott.numanaral.dev/" target="_blank" rel="noopener"><i class="fa fa-slideshare"></i><span class="label">Slide Scott</span><span class="handle">slide-scott.numanaral.dev</span></a>
+								<a class="row project-chin-scraper" href="https://chin-scraper.numanaral.dev/" target="_blank" rel="noopener"><i class="fa fa-language"></i><span class="label">Chin Scraper</span><span class="handle">chin-scraper.numanaral.dev</span></a>
+							</div>
+						</div>
+					</aside>
+				</div>
+			</main>
 		</div>
 
-		<!-- MY FUN LITTLE PROJECT CUZ THIS IS TOO BORING ATM -->
+		<!-- FUN LITTLE PROJECT FROM AGES AGO: BACKGROUND RINGS -->
 		<script src="https://cdn.jsdelivr.net/gh/numanaral/coolcircles@770e25be7796e6cfa695d32db6d775ea3d80955b/script.js"></script>
+		
+		<!-- SCRIPTS -->
 		<script src="script.js"></script>
-    </body>
-
+	</body>
 </html>
-

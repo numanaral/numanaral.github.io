@@ -1,50 +1,89 @@
-/** @see https://www.w3schools.com/howto/howto_js_draggable.asp */
-const dragElement = elm => {
-	let pos1 = 0;
-	let pos2 = 0;
-	let pos3 = 0;
-	let pos4 = 0;
+/**
+ * 1. Inject .pill into every .fa.icon (so the bg pill scales independently
+ *    from the FontAwesome ::before glyph).
+ * 2. Lazy-swap LQIP -> full avatar on load.
+ * 3. Wire up the details/expand toggle.
+ * 4. Drag the whole preview-card around (only when grabbing the card itself).
+ */
 
-	const dragMouseDown = e => {
-		e = e || window.event;
-		e.preventDefault();
-		// add dragging state
-		elm.classList.add('dragging');
-		// get the mouse cursor position at startup:
-		pos3 = e.clientX;
-		pos4 = e.clientY;
-		document.onmouseup = closeDragElement;
-		// call a function whenever the cursor moves:
-		document.onmousemove = elementDrag;
+const $ = (sel, ctx = document) => ctx.querySelector(sel);
+const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+
+// 1. Inject background pill on icons
+$$(".fa.icon").forEach((el) => {
+	if (el.querySelector(":scope > .pill")) return;
+	const pill = document.createElement("span");
+	pill.className = "pill";
+	pill.setAttribute("aria-hidden", "true");
+	el.prepend(pill);
+});
+
+// 2. Lazy-load full avatar
+$$(".lazy-img").forEach((img) => {
+	if (img.complete && img.naturalWidth > 0) {
+		img.classList.add("loaded");
+	} else {
+		img.addEventListener("load", () => img.classList.add("loaded"), { once: true });
 	}
+});
 
-	const elementDrag = e => {
-		e = e || window.event;
-		e.preventDefault();
-		// calculate the new cursor position:
-		pos1 = pos3 - e.clientX;
-		pos2 = pos4 - e.clientY;
-		pos3 = e.clientX;
-		pos4 = e.clientY;
-		// set the element's new position:
-		elm.style.top = `${elm.offsetTop - pos2}px`;
-		elm.style.left = `${elm.offsetLeft - pos1}px`;
-	}
-
-	const closeDragElement = () => {
-		// remove dragging state
-		elm.classList.remove('dragging');
-		// stop moving when mouse button is released:
-		document.onmouseup = null;
-		document.onmousemove = null;
-	}
-
-	elm.onmousedown = dragMouseDown;
+// 3. Expand toggle
+const stageRoot = $("#previewCard");
+const expandToggle = $('[data-action="toggle-expand"]');
+if (expandToggle && stageRoot) {
+	expandToggle.addEventListener("click", (e) => {
+		e.stopPropagation();
+		stageRoot.classList.toggle("is-expanded");
+		expandToggle.textContent = stageRoot.classList.contains("is-expanded")
+			? "close"
+			: "details";
+	});
 }
 
-// Make the DIV element draggable:
-const card = document.getElementsByClassName('card')[0];
-dragElement(card);
-setTimeout(() => {
-	card.classList.remove('small');
-}, 100);
+// 4. Drag the preview-card
+/** @see https://www.w3schools.com/howto/howto_js_draggable.asp */
+const makeDraggable = (handle, target) => {
+	let startX = 0;
+	let startY = 0;
+	let dx = 0;
+	let dy = 0;
+
+	const onDown = (e) => {
+		// don't start a drag from links/buttons inside the card
+		if (e.target.closest("a, button")) return;
+		e.preventDefault();
+		target.classList.add("dragging");
+		startX = e.clientX;
+		startY = e.clientY;
+		document.addEventListener("mousemove", onMove);
+		document.addEventListener("mouseup", onUp);
+	};
+
+	const onMove = (e) => {
+		e.preventDefault();
+		dx = startX - e.clientX;
+		dy = startY - e.clientY;
+		startX = e.clientX;
+		startY = e.clientY;
+		target.style.top = `${target.offsetTop - dy}px`;
+		target.style.left = `${target.offsetLeft - dx}px`;
+	};
+
+	const onUp = () => {
+		target.classList.remove("dragging");
+		document.removeEventListener("mousemove", onMove);
+		document.removeEventListener("mouseup", onUp);
+	};
+
+	handle.addEventListener("mousedown", onDown);
+};
+
+const card = $("#card");
+const preview = $("#previewCard");
+if (card && preview) {
+	makeDraggable(card, preview);
+	// drop the small intro scale after first paint
+	requestAnimationFrame(() => {
+		setTimeout(() => card.classList.remove("small"), 80);
+	});
+}

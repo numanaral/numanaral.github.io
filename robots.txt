@@ -3,4 +3,4 @@ Disallow: /chin-scraper/not-found
 Disallow: /chin-scraper/unauthorized
 Disallow: /chin-scraper/login
 
-Sitemap: https://numanaral.github.io/chin-scraper/sitemap.xml
+Sitemap: https://numanaral.dev/sitemap.xml
